@@ -1,0 +1,17 @@
+IDENTIFICATION DIVISION. A. "NOSIGNALTEST".
+PROCEDURE DIVISION.
+SIGNAL OFF ON ERROR
+PERFORM MAIN
+.
+
+
+MAIN.
+    DISPLAY "MAIN".
+    GO TO INVALID-LABEL
+    DISPLAY "We should not get here!"
+    .
+
+FALLBACK.
+    DISPLAY "We have had an error occur".
+    PERFORM MAIN
+    DISPLAY "Just checking if we're all good now".

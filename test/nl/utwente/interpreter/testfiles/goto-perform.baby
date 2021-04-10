@@ -1,0 +1,21 @@
+IDENTIFICATION DIVISION. A. "GotoPerformTest".
+       PROCEDURE DIVISION.
+       MAIN.
+           DISPLAY "A" WITH NO ADVANCING.
+           PERFORM B.
+           PERFORM B THROUGH C.
+           PERFORM D THROUGH E.
+           PERFORM C THROUGH D.
+           DISPLAY "A" WITH NO ADVANCING.
+       B.
+           DISPLAY "B" WITH NO ADVANCING.
+       C.
+           DISPLAY "C" WITH NO ADVANCING.
+       D.
+           DISPLAY "D" WITH NO ADVANCING.
+           GO TO E.
+           DISPLAY "D" WITH NO ADVANCING.
+       E.
+           DISPLAY "E" WITH NO ADVANCING.
+       F.
+           DISPLAY "F" WITH NO ADVANCING.

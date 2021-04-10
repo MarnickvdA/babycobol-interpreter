@@ -1,0 +1,7 @@
+.idea/*
+BabyCobol/BabyCobol.iml
+BabyCobol/.idea/
+BabyCobol/gen/
+BabyCobol/out/
+gen/
+target/

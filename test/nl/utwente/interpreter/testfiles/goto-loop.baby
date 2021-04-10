@@ -1,0 +1,23 @@
+IDENTIFICATION DIVISION. A. "GotoLoopTest".
+DATA DIVISION
+01 INDEX PICTURE IS 9.
+PROCEDURE DIVISION.
+PERFORM A.
+
+A.
+    DISPLAY "COUNT" WITH NO ADVANCING.
+    GO TO B.
+    DISPLAY "Should not reach!".
+B.
+    LOOP
+        VARYING INDEX FROM 1 TO 5 BY 1
+        DISPLAY INDEX WITH NO ADVANCING
+        EVALUATE INDEX
+            WHEN 4
+                GO TO C
+                DISPLAY "should not display 4"
+        END
+    END
+    .
+C.
+    DISPLAY "DONE" WITH NO ADVANCING.

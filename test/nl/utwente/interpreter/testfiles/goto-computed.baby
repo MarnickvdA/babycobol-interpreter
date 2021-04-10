@@ -1,0 +1,11 @@
+IDENTIFICATION DIVISION. A. "GotoComputedTest".
+PROCEDURE DIVISION.
+
+MAIN.
+    DISPLAY "Testing...".
+    MOVE "GOTOLABEL" TO GOTO.
+    GO TO GOTO.
+    DISPLAY "Should not reach!".
+
+GOTOLABEL.
+    DISPLAY "Reached Computed GOTO".

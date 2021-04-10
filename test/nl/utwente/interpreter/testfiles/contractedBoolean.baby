@@ -1,0 +1,16 @@
+IDENTIFICATION DIVISION. A. "ContractedBooleanTest".
+PROCEDURE DIVISION.
+MAIN.
+    MOVE 10 TO A
+    MOVE 5 TO Y
+    IF A = 10 AND > 5 - 0 AND > 7 AND Y = 5 THEN
+        DISPLAY A
+        END
+
+    MOVE 10 TO B
+    EVALUATE B > 5 AND = 10
+        WHEN B < 5 OR > 5 ADD 5 TO B
+        WHEN OTHER SUBTRACT 5 FROM B
+    END
+    DISPLAY B
+.

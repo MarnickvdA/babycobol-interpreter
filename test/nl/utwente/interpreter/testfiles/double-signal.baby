@@ -1,0 +1,23 @@
+IDENTIFICATION DIVISION. A. "DOUBLESIGNAL".
+PROCEDURE DIVISION.
+SIGNAL FALLBACK ON ERROR
+PERFORM MAIN
+.
+
+
+MAIN.
+    DISPLAY "MAIN".
+    GO TO INVALID-LABEL
+    DISPLAY "We should not get here!"
+    .
+
+FALLBACK.
+    DISPLAY "We have had an error occur".
+    SIGNAL FALLBACKFALLBACK ON ERROR
+    PERFORM MAIN
+    DISPLAY "Just checking if we're all good now".
+
+
+FALLBACKFALLBACK.
+    DISPLAY "We are really falling back now".
+    PERFORM MAIN.

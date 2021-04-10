@@ -1,0 +1,45 @@
+IDENTIFICATION DIVISION. A. "EvaluateTest".
+PROCEDURE DIVISION.
+
+MAIN.
+    ADD 1 TO 2 GIVING A
+
+    EVALUATE A
+        WHEN 4
+            DISPLAY "should not display A"
+        WHEN 3
+            DISPLAY A
+    END
+
+    EVALUATE A
+        WHEN 4
+            DISPLAY "should not display 4"
+        WHEN 5
+            DISPLAY "should not display 5"
+        WHEN OTHER
+            DISPLAY "WHEN OTHER was reached!"
+    END
+
+    EVALUATE 3 + 1
+        WHEN 4
+            DISPLAY 4
+        WHEN 5
+            DISPLAY "should not display 5"
+        WHEN OTHER
+            DISPLAY "should not reached WHEN OTHER"
+    END
+
+    ADD 3 TO 3 GIVING A
+
+    EVALUATE A
+        WHEN 4
+            DISPLAY "should not display 4"
+        WHEN 5
+            DISPLAY "should not display 5"
+        WHEN OTHER
+            DISPLAY "Reached WHEN OTHER and now subtracting to get A=3"
+            SUBTRACT 3 FROM A
+        WHEN 3
+            DISPLAY 3
+    END
+.

@@ -1,0 +1,8 @@
+IDENTIFICATION DIVISION. A. "DisplayTest".
+PROCEDURE DIVISION.
+MAIN.
+    DISPLAY "hello world" WITH NO ADVANCING
+    DISPLAY "numerical values below" WITH NO ADVANCING
+    DISPLAY 1 2 3 100 WITH NO ADVANCING
+    DISPLAY "this display works correctly and has printed 3 statements before this one" WITH NO ADVANCING
+.
